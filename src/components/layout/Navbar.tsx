@@ -71,7 +71,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="h-12 w-12 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-secondary drop-shadow-lg">
+          <p className="flex cursor-pointer text-[18px] font-bold text-white drop-shadow-lg">
             {config.html.title}
           </p>
         </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.id ? "text-white" : "text-secondary"
+                active === nav.id ? "text-white" : "text-white"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

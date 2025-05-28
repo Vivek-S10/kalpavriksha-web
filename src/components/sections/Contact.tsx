@@ -20,7 +20,7 @@ const emailjsConfig = {
 
 // Professional Contact Details
 const contactDetails = {
-  managingDirector: "S. Abhinav",
+  managingDirectors: ["S. Abhinav", "Ramya Sivakumar"],
   executiveOfficer: "S. Sivakumar",
   officeAddress: {
     chennai: "No. 12, Anna Salai, Mount Road, Chennai, Tamil Nadu - 600002",
@@ -94,8 +94,10 @@ const Contact = () => {
           
           <div className="space-y-6">
             <p className="text-white text-lg flex items-center">
-              <span className="text-secondary font-medium mr-2">Managing Director :</span>
-              <span>{contactDetails.managingDirector}</span>
+              <span className="text-secondary font-medium mr-2">Managing Directors :</span>
+              <span>
+                {contactDetails.managingDirectors.join(", ")}
+              </span>
             </p>
             <p className="text-white text-lg flex items-center">
               <span className="text-secondary font-medium mr-2">Executive Officer :</span>

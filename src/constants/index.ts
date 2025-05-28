@@ -142,7 +142,7 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "Trading and Investment",
+    title: "Investment and Trading",
     companyName: "",
     icon: stock,
     iconBg: "#383E56",
@@ -158,17 +158,17 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "",
     points: [
-      "With a strong global network, we manage cross-border trade efficiently, handling everything from logistics to compliance.",
+      "With a strong global network, we manage cross\u2011border trade efficiently, handling everything from logistics to compliance.",
     ],
   },
   {
-    title: "Government Tenders and Procurement",
+    title: "Central Government Tenders and Procurement",
     companyName: "",
     icon: tender,
     iconBg: "#383E56",
     date: "",
     points: [
-      "We actively participate in GeM (Government e-Marketplace) tenders, offering trusted solutions for public sector procurement.",
+      "We actively participate in GeM (Government\u2011e\u2011Marketplace) tenders, offering trusted solutions for public sector procurement.",
     ],
   },
   {
@@ -192,7 +192,7 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "Food Items - Import & Export",
+    title: "Non-Perishable Food Items Import & Export",
     companyName: "",
     icon: menu1,
     iconBg: "#E6DEDD",
@@ -216,19 +216,19 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "Expertise in public sector procurement and tender processes.",
-    name: "Trusted Partner",
-    designation: "for",
-    company: "Government Tenders",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
       " Real estate, trading, garments, textiles, and food exports.",
     name: "Diverse Industry",
     designation: "Experience",
     company: "",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
+  },
+  {
+    testimonial:
+      "Expertise in public sector procurement and tender processes.",
+    name: "Trusted Partner",
+    designation: "for",
+    company: "Government Tenders",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:

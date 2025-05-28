@@ -67,7 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `At Kalpavriksha Advance Ventures, we provide comprehensive trading, investment, real estate, and import-export solutions to ensure profitable and secure business opportunities. Our expertise extends to government tenders, making us a reliable partner for both private and public sector projects.`,
+      content: `At Kalpavriksha Advance Ventures, we provide comprehensive trading, investment, real\u2011estate, and import-export solutions to ensure profitable and secure business opportunities. Our expertise extends to government tenders, making us a reliable partner for both private and public sector projects.`,
     },
     experience: {
       p: "What I have done so far",
