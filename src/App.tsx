@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="bg-primary relative z-0">
+      <div className="relative z-0 bg-primary min-h-screen">
         <div
           className="bg-hero-pattern bg-cover bg-no-repeat"
           style={{ backgroundPosition: "center 1px" }}

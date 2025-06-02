@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#d2d2d2", 
-        secondary: "#000000", // Example: Deep reddish brown
+        primary: "#6B1F0F", 
+        secondary: "#ffffff", // Example: Deep reddish brown
         tertiary: "#000000",
         "black-100": "#100d25",
         "black-200": "#090325",
@@ -19,7 +19,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/KAL.jpg')",
+        "hero-pattern": "url('/src/assets/logo-2.png')",
       },
     },
   },

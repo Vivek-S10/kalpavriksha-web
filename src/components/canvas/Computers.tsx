@@ -37,8 +37,19 @@
 //     };
 //   }, []);
 
-//   // Remove 3D model, render nothing
-//   return null;
+//   return (
+//     <Canvas
+//       shadows
+//       camera={{ position: [5, 5, 5], fov: 25 }}
+//       style={{ height: "100vh", width: "100vw" }}
+//     >
+//       <Suspense fallback={<CanvasLoader />}>
+//         {/* <OrbitControls enableZoom={false} /> */}
+//         <KalpavrikshaTree isMobile={isMobile} />
+//         <Preload all />
+//       </Suspense>
+//     </Canvas>
+//   );
 // };
 
 // export default ComputersCanvas;
