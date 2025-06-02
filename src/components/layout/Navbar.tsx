@@ -53,13 +53,14 @@ const Navbar = () => {
       className={`${
         styles.paddingX
       } fixed top-0 z-20 flex w-full items-center py-5 transition-colors duration-500 ${
-        scrolled ? "bg-kaavi/95 shadow-md" : "bg-transparent"
+        scrolled ? "bg-[#7b3f00]/90 backdrop-blur-lg shadow-md" : "bg-transparent"
       }`}
       style={{
-        transition: "background-color 0.5s cubic-bezier(0.4,0,0.2,1)",
-        WebkitBackdropFilter: !scrolled ? "blur(0px)" : undefined,
-        backdropFilter: !scrolled ? "blur(0px)" : undefined,
-        backgroundColor: !scrolled ? "transparent" : undefined,
+        transition:
+          "background-color 0.5s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.5s cubic-bezier(0.4,0,0.2,1)",
+        WebkitBackdropFilter: scrolled ? "blur(16px)" : undefined,
+        backdropFilter: scrolled ? "blur(16px)" : undefined,
+        backgroundColor: scrolled ? "rgba(123,63,0,0.9)" : "transparent",
       }}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
@@ -71,7 +72,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="h-12 w-12 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-white drop-shadow-lg">
+          <p className="flex cursor-pointer text-[18px] font-bold text-white center">
             {config.html.title}
           </p>
         </Link>
@@ -81,7 +82,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.id ? "text-white" : "text-white"
+                active === nav.id ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

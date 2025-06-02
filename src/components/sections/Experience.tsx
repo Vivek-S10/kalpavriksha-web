@@ -16,15 +16,12 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "linear-gradient(135deg, #a34c2a 0%, #7B2C19 100%)",
+        background: "#7b3f00",
         color: "#fff",
-        borderRadius: "20px",
-        boxShadow: "0px 35px 120px -15px #211e35",
-        padding: "1px",
       }}
-      contentArrowStyle={{ borderRight: "7px solid #a34c2a" }}
+      contentArrowStyle={{ borderRight: "7px solid #a0522d" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: "#a0522d" }}
       icon={
         <div className="flex h-full w-full items-center justify-center">
           <img
@@ -35,25 +32,26 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
         </div>
       }
     >
-      <div className="bg-black-100 rounded-[20px] px-6 py-4">
-        <h3 className="text-[24px] font-bold text-secondary">{experience.title}</h3>
+      <div>
+        <h3 className="text-[24px] font-bold text-white">{experience.title}</h3>
         <p
-          className="text-accent text-[16px] font-semibold"
+          className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.companyName}
         </p>
-        <ul className="ml-5 mt-5 list-disc space-y-2">
-          {experience.points.map((point, index) => (
-            <li
-              key={`experience-point-${index}`}
-              className="text-white-100 pl-1 text-[14px] tracking-wider"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
       </div>
+
+      <ul className="ml-5 mt-5 list-disc space-y-2">
+        {experience.points.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+            className="text-white-100 pl-1 text-[14px] tracking-wider"
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
     </VerticalTimelineElement>
   );
 };
@@ -64,7 +62,7 @@ const Experience = () => {
       <Header useMotion={true} {...config.sections.experience} />
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor="#000">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
           ))}

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import EarthCanvas from "../canvas/Earth";
+import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
@@ -20,7 +20,7 @@ const emailjsConfig = {
 
 // Professional Contact Details
 const contactDetails = {
-  managingDirectors: ["S. Abhinav", "Ramya Sivakumar"],
+  managingDirector: "Abhinav S",
   executiveOfficer: "S. Sivakumar",
   officeAddress: {
     chennai: "No. 12, Anna Salai, Mount Road, Chennai, Tamil Nadu - 600002",
@@ -84,49 +84,42 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="bg-black-100 w-full xl:w-[69%] rounded-2xl p-10"
+        className="bg-[#7b3f00] flex-[0.75] rounded-2xl p-8"
       >
         <Header useMotion={false} {...config.contact} />
 
         {/* Professional Contact Information Section */}
-        <div className="mt-8 mb-8 bg-tertiary rounded-lg p-8">
-          <h3 className="text-white text-xl font-bold mb-8"></h3>
+        <div className="mt-8 mb-8 bg-[#a0522d] rounded-lg p-8">
+          <h3 className="text-white text-xl font-bold mb-8">Contact Information</h3>
           
           <div className="space-y-6">
-            <p className="text-white text-lg flex items-center">
-              <span className="text-secondary font-medium mr-2">Managing Directors :</span>
-              <span>
-                {contactDetails.managingDirectors.join(", ")}
-              </span>
+            <p className="text-white text-lg">
+              <span className="text-secondary font-medium">Managing Director:</span> {contactDetails.managingDirector}
             </p>
-            <p className="text-white text-lg flex items-center">
-              <span className="text-secondary font-medium mr-2">Executive Officer :</span>
-              <span>{contactDetails.executiveOfficer}</span>
+            <p className="text-white text-lg">
+              <span className="text-secondary font-medium">Executive Officer:</span> {contactDetails.executiveOfficer}
             </p>
-            <div className="text-white flex items-start">
-              <span className="text-secondary font-medium text-lg mr-2"></span>
-              <div className="ml-2 mt-1 space-y-4">
+            <div className="text-white">
+              <span className="text-secondary font-medium text-lg">Office Address:</span>
+              <div className="ml-6 mt-4 space-y-4">
                 <div>
-                  <span className="text-secondary text-base font-medium mr-2">Chennai Branch :</span>
-                  <span className="text-white">{contactDetails.officeAddress.chennai}</span>
+                  <span className="text-secondary text-base font-medium">Chennai Branch:</span>
+                  <p className="text-white ml-2 mt-1">{contactDetails.officeAddress.chennai}</p>
                 </div>
                 <div>
-                  <span className="text-secondary text-base font-medium mr-2">Coimbatore Branch :</span>
-                  <span className="text-white">{contactDetails.officeAddress.coimbatore}</span>
+                  <span className="text-secondary text-base font-medium">Coimbatore Branch:</span>
+                  <p className="text-white ml-2 mt-1">{contactDetails.officeAddress.coimbatore}</p>
                 </div>
               </div>
             </div>
-            <p className="text-white text-lg flex items-center">
-              <span className="text-secondary font-medium mr-2"></span>
-              <span>{contactDetails.phoneNumber}</span>
+            <p className="text-white text-lg">
+              <span className="text-secondary font-medium">Phone Number:</span> {contactDetails.phoneNumber}
             </p>
-            <p className="text-white text-lg flex items-center">
-              <span className="text-secondary font-medium mr-2"></span>
-              <span>{contactDetails.email}</span>
+            <p className="text-white text-lg">
+              <span className="text-secondary font-medium">Email:</span> {contactDetails.email}
             </p>
-            <p className="text-white text-lg flex items-center">
-              <span className="text-secondary font-medium mr-2">GSTIN :</span>
-              <span>{contactDetails.gstin}</span>
+            <p className="text-white text-lg">
+              <span className="text-secondary font-medium">GSTIN:</span> {contactDetails.gstin}
             </p>
           </div>
         </div>
@@ -134,7 +127,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="h-[380px] md:h-[600px] xl:h-[650px] xl:w-[32%]"
+        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1 rounded-2xl flex items-center"
       >
         <EarthCanvas />
       </motion.div>

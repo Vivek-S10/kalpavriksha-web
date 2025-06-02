@@ -142,6 +142,16 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
+    title: "Real Estate & Land Promotion",
+    companyName: "",
+    icon: real_estate,
+    iconBg: "#E6DEDD",
+    date: "",
+    points: [
+      "We specialize in land acquisition, development, and promotion, helping investors and businesses make the best real estate decisions.",
+    ],
+  },
+  {
     title: "Investment and Trading",
     companyName: "",
     icon: stock,
@@ -171,16 +181,7 @@ const experiences: TExperience[] = [
       "We actively participate in GeM (Government\u2011e\u2011Marketplace) tenders, offering trusted solutions for public sector procurement.",
     ],
   },
-  {
-    title: "Real Estate & Land Promotion",
-    companyName: "",
-    icon: real_estate,
-    iconBg: "#E6DEDD",
-    date: "",
-    points: [
-      "We specialize in land acquisition, development, and promotion, helping investors and businesses make the best real estate decisions.",
-    ],
-  },
+  
   {
     title: "Garments & Textile Industry",
     companyName: "",

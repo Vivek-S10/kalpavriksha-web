@@ -20,21 +20,21 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
     tiltEnable
     tiltMaxAngleX={30}
     tiltMaxAngleY={30}
-    glareColor="#bfa14a"
+    glareColor="#aaa6c3"
   >
     <div className="max-w-[250px] w-full xs:w-[250px]">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="bg-gradient-to-br from-kaavi via-tertiary to-black-100 shadow-card w-full rounded-[20px] p-[1.5px]"
+        className="bg-gradient-to-br from-[#7b3f00] via-[#a0522d] to-[#7b3f00] shadow-card w-full rounded-[20px] p-[1px]"
       >
-        <div className="bg-black-100 flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5">
+        <div className="bg-[#a0522d] flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5">
           <img
             src={icon}
             alt="web-development"
             className="h-16 w-16 object-contain"
           />
 
-          <h3 className="text-center text-[20px] font-bold text-secondary">
+          <h3 className="text-center text-[20px] font-bold text-white">
             {title}
           </h3>
         </div>

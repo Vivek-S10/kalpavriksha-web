@@ -70,7 +70,7 @@ export const config: TConfig = {
       content: `At Kalpavriksha Advance Ventures, we provide comprehensive trading, investment, real\u2011estate, and import-export solutions to ensure profitable and secure business opportunities. Our expertise extends to government tenders, making us a reliable partner for both private and public sector projects.`,
     },
     experience: {
-      p: "What I have done so far",
+      p: "What We have done so far",
       h2: "Our Services.",
       content: `Kalpavriksha Advance Ventures offers a variety of services tailored to meet the needs of our clients. From trading and investment to real estate and government tenders, we provide solutions that drive growth and success.`,
     },
