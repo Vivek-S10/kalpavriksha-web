@@ -85,7 +85,55 @@ const Navbar = () => {
                 active === nav.id ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a
+                href={
+                  nav.id === "home"
+                    ? "#"
+                    : nav.id === "services"
+                    ? "#work"
+                    : nav.id === "whyus"
+                    ? "#feedbacks"
+                    : nav.id === "about"
+                    ? "#about"
+                    : nav.id === "contact"
+                    ? "#contact"
+                    : `#${nav.id}`
+                }
+                onClick={
+                  nav.id === "home"
+                    ? (e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    : nav.id === "whyus"
+                    ? (e) => {
+                        e.preventDefault();
+                        const el = document.getElementById("feedbacks");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }
+                    : nav.id === "services"
+                    ? (e) => {
+                        e.preventDefault();
+                        const el = document.getElementById("work");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }
+                    : nav.id === "about"
+                    ? (e) => {
+                        e.preventDefault();
+                        const el = document.getElementById("about");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }
+                    : nav.id === "contact"
+                    ? (e) => {
+                        e.preventDefault();
+                        const el = document.getElementById("contact");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }
+                    : undefined
+                }
+              >
+                {nav.title}
+              </a>
             </li>
           ))}
         </ul>

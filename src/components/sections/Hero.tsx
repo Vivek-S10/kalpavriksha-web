@@ -4,7 +4,26 @@ import { config } from "../../constants/config";
 
 const Hero = () => {
   return (
-    <section className="relative mx-auto h-screen w-full">
+    <section
+      className="relative mx-auto h-screen w-full"
+      style={{
+        backgroundImage: "none",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "200px auto",
+      }}
+    >
+      <style>
+        {`
+          @media (max-width: 640px) {
+            section[style] {
+              background-image: url('/src/assets/mobile-view.png') !important;
+              background-size: cover !important;
+              background-position: center !important;
+            }
+          }
+        `}
+      </style>
       {/* 3D model removed */}
       <div className="xs:bottom-10 absolute bottom-32 flex w-full items-center justify-center">
         <a href="#about">
