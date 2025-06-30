@@ -28,6 +28,7 @@ import {
   starbucks,
   tesla,
   shopify,
+  academic,
   // carrent,
   // jobit,
   // tripguide,
@@ -162,6 +163,16 @@ const experiences: TExperience[] = [
     ],
   },
   {
+    title: "Educational Government Tenders",
+    companyName: "",
+    icon: academic,
+    iconBg: "#E6DEDD",
+    date: "",
+    points: [
+      "Enabling educational development through strategic infrastructure projects in collaboration with public sector programs.",
+    ],
+  },
+  {
     title: "Import and Export",
     companyName: "",
     icon: import_export,
@@ -171,6 +182,7 @@ const experiences: TExperience[] = [
       "With a strong global network, we manage cross\u2011border trade efficiently, handling everything from logistics to compliance.",
     ],
   },
+  
   {
     title: "Central Government Tenders and Procurement",
     companyName: "",

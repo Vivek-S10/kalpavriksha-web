@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
 import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
-import { logo, menu, close } from "../../assets";
+import { menu, close } from "../../assets";
 import { config } from "../../constants/config";
 
 const Navbar = () => {
@@ -64,19 +62,7 @@ const Navbar = () => {
       }}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt="logo" className="h-12 w-12 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-white center">
-            {config.html.title}
-          </p>
-        </Link>
-
+        {/* Logo and title removed as requested */}
         <ul className="hidden list-none flex-row gap-10 sm:flex">
           {navLinks.map((nav) => (
             <li
@@ -162,7 +148,23 @@ const Navbar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a
+                    href={
+                      nav.id === "home"
+                        ? "#"
+                        : nav.id === "services"
+                        ? "#work"
+                        : nav.id === "whyus"
+                        ? "#feedbacks"
+                        : nav.id === "about"
+                        ? "#about"
+                        : nav.id === "contact"
+                        ? "#contact"
+                        : `#${nav.id}`
+                    }
+                  >
+                    {nav.title}
+                  </a>
                 </li>
               ))}
             </ul>

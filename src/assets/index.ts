@@ -36,6 +36,7 @@ import real_estate from "./company/reak-estate.png";
 import stock from "./company/stock-market.png";
 import tender from "./company/tender.png";
 import textile from "./company/textile.png";
+import academic from "./company/academic.png";
 export {
   menu1,
   multi_industry,
@@ -69,6 +70,7 @@ export {
   shopify,
   starbucks,
   tesla,
+  academic
   // carrent,
   // jobit,
   // tripguide,
